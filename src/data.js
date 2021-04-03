@@ -14,7 +14,6 @@ Data.addAnItem = async(req,res,next) => {
   } catch(e) { next(e.message); }
 }
 
-//----------------
 Data.updateOneItem = async(req, res) => {
   const id = req.params.id;
   const data = req.body;
@@ -22,7 +21,6 @@ Data.updateOneItem = async(req, res) => {
   res.status(200).json(item);
 }
 
-//-------------------
 Data.getAllItems = async(req, res) => {
   const items = await DataModel.find({});
   res.status(200).send(items);
